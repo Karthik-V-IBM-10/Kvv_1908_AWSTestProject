@@ -8,6 +8,11 @@ runtimes:
     uid: fl17d539a8d631443d83a30167c544de4f
     stepId: a0
     reference: project.kvv_1908_awstest.integrations:AlertsCRTandERT
+  - name: 180cdt Workflow
+    type: workflow
+    uid: fl2928557f25624487b8d079a487b489e7
+    stepId: a0
+    reference: SIQA_TimeoutTest:delayfor180Sec
 - runtimeAlias: kvv_1908_AWSTest
   assets:
   - name: alert Workflow
