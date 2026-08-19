@@ -47,6 +47,9 @@ packages:
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: manoj-jannu-IBM
   gitBranch: main
+- name: WmSalesforceRESTProvider
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: supported
 services:
 - serviceName: project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:TestDBConn
   packages:
@@ -287,32 +290,6 @@ services:
   - name: DADA_GlobalVariable1
     version: "1.0"
 configurationVariables:
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.dbType
-  : MSSQL
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.databaseName
-  : SIQACloud
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.poolable
-  : "false"
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.otherProperties
-  : loginTimeout=60;driverType=thin;
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.poolIncrementSize
-  : "1"
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.password
-  : "{AES}X4QCAWgjWkTdMQvFA5XaqGmK1wuN3U1rA1B0VhuZoUw="
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.blockingTimeout
-  : "1000"
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionEnabled
-  : "false"
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.trustStore
-  : ""
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.portNumber
-  : "1433"
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.minimumPoolSize
-  : "1"
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.serverName
-  : 9.60.195.99
-  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.startupBackoffSecs
-  : "10"
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.driverType
   : Progress® DataDirect®
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.datasourceClass
@@ -321,15 +298,41 @@ configurationVariables:
   : sa
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.heartBeatInterval
   : "0"
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.trustStore
+  : ""
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.dbType
+  : MSSQL
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.databaseName
+  : SIQACloud
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.portNumber
+  : "1433"
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.serverName
+  : 9.60.195.99
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.networkProtocol
   : tcp
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.maximumPoolSize
   : "10"
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.keyStore
   : ""
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.startupBackoffSecs
+  : "10"
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.transactionType
   : NO_TRANSACTION
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.startupRetryCount
   : "0"
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionSettings.password
+  : "{AES}X4QCAWgjWkTdMQvFA5XaqGmK1wuN3U1rA1B0VhuZoUw="
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionEnabled
+  : "false"
   ? artConnection.Kvv_1908_AWSTestProject.project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mssql.connectionManagerSettings.expireTimeout
   : "1000"
