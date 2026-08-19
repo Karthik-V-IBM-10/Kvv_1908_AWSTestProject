@@ -40,6 +40,11 @@ packages:
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: manoj-jannu-IBM
   gitBranch: main
+- name: SIQA_TimeoutTest
+  gitServerName: SIQAGithubTest
+  gitUrl: https://github.com/manoj-jannu-IBM
+  gitUsername: manoj-jannu-IBM
+  gitBranch: main
 services:
 - serviceName: project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:mssql
   packages:
