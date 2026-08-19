@@ -1,0 +1,17 @@
+version: "1.0"
+projectName: Kvv_1908_AWSTestProject
+runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: alert Workflow
+    type: workflow
+    uid: fl17d539a8d631443d83a30167c544de4f
+    stepId: a0
+    reference: project.kvv_1908_awstest.integrations:AlertsCRTandERT
+- runtimeAlias: kvv_1908_AWSTest
+  assets:
+  - name: alert Workflow
+    type: workflow
+    uid: fl17d539a8d631443d83a30167c544de4f
+    stepId: a1
+    reference: project.kvv_1908_awstest.integrations:AlertsCRTandERT
