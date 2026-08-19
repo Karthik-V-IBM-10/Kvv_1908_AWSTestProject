@@ -12,19 +12,30 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 - name: JMS2waySSL
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/prabhakarsag
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: JMSTest
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/prabhakarsag
+  gitUsername: Karthik-V-IBM-10
+  gitBranch: main
+- name: SSL_JDBC_Test
+  gitServerName: kvv
+  gitUrl: https://github.com/prabhakaribm
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 services:
 - serviceName: project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:mssql
   packages:
   - name: Kvv_1908_AWSTestProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -34,6 +45,10 @@ services:
   packages:
   - name: Kvv_1908_AWSTestProject
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
@@ -41,6 +56,10 @@ services:
 - serviceName: project.kvv_1908_awstest.integrations:AlertsCRTandERT
   packages:
   - name: Kvv_1908_AWSTestProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -50,9 +69,49 @@ services:
   packages:
   - name: WmPublic
     version: 12.1.0.0.1032
+- serviceName: project.kvv_1908_awstest.integrations:JMSFlowTest
+  packages:
+  - name: Kvv_1908_AWSTestProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: publisher:publisher
+  packages:
+  - name: JMSTest
+    version: "1.0"
+- serviceName: pub.jms:send
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1032
+- serviceName: project.kvv_1908_awstest.integrations:JMS_JNDI_SSL
+  packages:
+  - name: Kvv_1908_AWSTestProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: jms2wayssl_publisher:jms2wayssl_publisher
+  packages:
+  - name: JMS2waySSL
+    version: "1.0"
 - serviceName: project.kvv_1908_awstest.integrations:SIQAAdapterFlow
   packages:
   - name: Kvv_1908_AWSTestProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
