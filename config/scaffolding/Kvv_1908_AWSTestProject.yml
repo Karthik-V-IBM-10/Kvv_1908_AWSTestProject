@@ -24,9 +24,15 @@ packages:
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: SSL_JDBC_Test
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/prabhakaribm
   gitUsername: Karthik-V-IBM-10
+  gitBranch: main
+- name: DADA_GlobalVariable1
+  gitServerName: SIQAGithubTest
+  gitUrl: https://github.com/manoj-jannu-IBM
+  gitUsername: manoj-jannu-IBM
   gitBranch: main
 services:
 - serviceName: project.kvv_1908_awstest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:mssql
@@ -34,6 +40,8 @@ services:
   - name: Kvv_1908_AWSTestProject
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: JMSTest
     version: "1.0"
@@ -47,6 +55,8 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
@@ -58,6 +68,8 @@ services:
   - name: Kvv_1908_AWSTestProject
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: JMSTest
     version: "1.0"
@@ -74,6 +86,8 @@ services:
   - name: Kvv_1908_AWSTestProject
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: JMSTest
     version: "1.0"
@@ -95,6 +109,8 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
@@ -111,10 +127,60 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.kvv_1908_awstest.integrations:SSL_JDBC_test
+  packages:
+  - name: Kvv_1908_AWSTestProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: SSL_JDBC_Test.services:getSSLandCloseConn
+  packages:
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.transaction:startTransaction
+  packages:
+  - name: WmART
+    version: 12.1.0.0.37
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: SSL_JDBC_Test.services:get_ssl
+  packages:
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.transaction:commitTransaction
+  packages:
+  - name: WmART
+    version: 12.1.0.0.37
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.connection:disableConnection
+  packages:
+  - name: WmART
+    version: 12.1.0.0.37
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
 configurationVariables:
